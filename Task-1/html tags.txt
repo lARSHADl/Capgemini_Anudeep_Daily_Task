@@ -1,0 +1,50 @@
+html tags
+
+
+
+tabluar cotent
+
+aligment
+
+<table boder = "2" >
+<tr>
+<th>coloum/heading</th>
+
+</tr> 
+ 
+<th>
+<td>
+
+
+</table>
+
+
+border:
+
+
+<table boder = "12">
+
+
+padding -> the distance between table content to its boder => cellpading
+
+cellpading = ""
+
+
+cell spacing -> to increase / decrease  the space between cells 
+
+<table  = "12">
+
+
+coloumspan:
+colspan
+
+no of cells combines and mergerd as one 
+
+<tr>
+<td colspan = '4'> </td>
+</tr>
+
+
+
+rowspan:
+
