@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .maindiv{
+            padding: 6%;
+            border: 2px solid black;
+            height: 250px;
+            width: 300px;
+            margin-left:400px ;
+            margin-top: 10px;
+        
+        }
+           
+        </style>
+</head>
+<body>
+    
+<div class="maindiv">
+    <h1>Movie Registration</h1>
+    <label for="username">Username</label>
+    &nbsp;
+    <input type="text" name="username" id="usernameid"  placeholder=" Enter the Username">
+    <br>
+    <br>
+    <label for="password">Password</label>
+    &nbsp;
+    <input type="password" name="password" id="passwordid" placeholder="Enter the Password">
+    <br>
+    <br>
+    <label >Class</label>
+     &nbsp;&nbsp;
+    <select id="selid">
+    
+        <option value="350">Platinium</option>
+        <option value="250">Diamond</option>
+        <option value="150">Gold</option>
+        <option value="100">Silver</option>
+    </select>
+    
+    <br>
+    <br>
+    
+    
+    <label for="">Number of Ticket</label>
+    <br><br>
+    
+    <input type="radio" id = "radioid" value="1" name="radio">1
+    <input type="radio" id = "radioid" value="2" name="radio">2
+    <input type="radio" id = "radioid" value="3" name="radio">3 
+    <input type="radio" id = "radioid" value="4" name="radio">4 
+    <input type="radio" id = "radioid" value="5" name="radio">5
+    <input type="radio" id = "radioid" value="6" name="radio">6
+    <br>
+    <br>
+    <br>
+    <button onclick="submit()">Submit</button>
+    &nbsp;&nbsp; &nbsp;&nbsp;
+    <button  onclick="calc()">Calculate</button>
+    
+    <br>
+    <label id="response"></label>
+    
+    </div>
+    <script  type="text/javascript" >
+
+        function calc(){
+            var clas = document.getElementById("selid").value;
+            var notck = document.querySelector('input[name="radio"]:checked').value;
+            if (notck.length == ""){
+                alert("No Radio button has been selected");
+            }
+            var result = clas*notck;
+            //alert(result)
+            document.getElementById("response").innerHTML="Total amount to be paid: "+result;
+    
+        };
+        function submit(){
+            var user = document.getElementById("usernameid").value;
+            var pass = document.getElementById("passwordid").value;
+            if (user.length == 0 || pass.length == 0){
+                alert("No username or password  has been provided");
+            }
+            var newpw=user.substring(0,3)+123;
+            if (pass==newpw){
+               
+                document.getElementById("response").innerHTML="The Detials has been submitted sucessfully";    
+            }
+            else{
+                document.getElementById("response").innerHTML=" Booking Failed ";
+            }
+        }
+        </script>
+    
+</body>
+</html>
